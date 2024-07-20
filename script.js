@@ -7,21 +7,44 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
+  // Correct use of .map() function to filter developers and console.log them
+  arr.map(employee => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here , just console.log
+  // Correct use of .forEach() function to filter developers and console.log them
+  arr.forEach(employee => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
 function addData() {
-  //Write your code here, just console.log
+  // Adding a new employee object to the array and console.log the updated array
+  const newEmployee = { id: 4, name: "susan", age: "20", profession: "intern" };
+  arr.push(newEmployee);
+  console.log(arr);
 }
 
 function removeAdmin() {
-  //Write your code here, just console.log
+  // Removing all employees with the profession 'admin' and console.log the updated array
+  const updatedArr = arr.filter(employee => employee.profession !== "admin");
+  console.log(updatedArr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  // Creating a new array with 3 objects and concatenating with the original array, then console.log the result
+  const newEmployees = [
+    { id: 5, name: "alex", age: "22", profession: "developer" },
+    { id: 6, name: "sara", age: "30", profession: "tester" },
+    { id: 7, name: "tom", age: "27", profession: "manager" }
+  ];
+  const concatenatedArray = arr.concat(newEmployees);
+  console.log(concatenatedArray);
 }
+
