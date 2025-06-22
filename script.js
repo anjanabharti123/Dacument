@@ -46,5 +46,6 @@ function concatenateArray() {
   ];
   const concatenatedArray = arr.concat(newEmployees);
   console.log(concatenatedArray);
+  
 }
 
